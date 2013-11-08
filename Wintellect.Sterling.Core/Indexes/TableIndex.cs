@@ -47,7 +47,7 @@ namespace Wintellect.Sterling.Core.Indexes
                 {
                     if ( _lazyValue.IsValueCreated )
                     {
-                        return Task<T>.FromResult( _lazyValue.Value );
+                        return TaskEx.FromResult<T>( _lazyValue.Value );
                     }
                     else
                     {

@@ -131,7 +131,7 @@ namespace Wintellect.Sterling.Core.Database
         /// <returns></returns>
         public Task<IList<string>> GetTypesAsync()
         {
-            return Task.FromResult( (IList<string>) new List<string>( TypeIndex ) );
+            return TaskEx.FromResult( (IList<string>) new List<string>( TypeIndex ) );
         }
 
         /// <summary>
@@ -161,7 +161,7 @@ namespace Wintellect.Sterling.Core.Database
         /// <returns>The type</returns>
         public virtual Task<string> GetTypeAtIndexAsync(int index)
         {
-            return Task.FromResult( TypeIndex[ index ] );
+            return TaskEx.FromResult( TypeIndex[ index ] );
         }
 
         /// <summary>

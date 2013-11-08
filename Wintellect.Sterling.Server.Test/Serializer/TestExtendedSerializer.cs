@@ -2,7 +2,11 @@ using System;
 using System.IO;
 #if SILVERLIGHT
 using Microsoft.Phone.Testing;
+#if WP7
+using Wintellect.Sterling.WP7;
+#else
 using Wintellect.Sterling.WP8;
+#endif
 #elif !NETFX_CORE
 using Wintellect.Sterling.Server;
 #endif

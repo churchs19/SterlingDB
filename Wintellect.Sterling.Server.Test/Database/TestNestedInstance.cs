@@ -4,7 +4,11 @@ using Wintellect.Sterling.WinRT.WindowsStorage;
 using Microsoft.VisualStudio.TestPlatform.UnitTestFramework;
 #elif SILVERLIGHT
 using Microsoft.Phone.Testing;
+#if WP7
+using Wintellect.Sterling.WP7.IsolatedStorage;
+#else
 using Wintellect.Sterling.WP8.IsolatedStorage;
+#endif
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 #else
 using Wintellect.Sterling.Server.FileSystem;
